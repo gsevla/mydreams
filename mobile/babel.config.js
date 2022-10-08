@@ -13,6 +13,7 @@ module.exports = function (api) {
             "@providers": "./src/providers",
             "@routes": "./src/routes",
             "@hooks": "./src/hooks",
+            "@constants": "./src/constants",
           },
         },
       ],

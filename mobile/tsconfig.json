@@ -9,7 +9,8 @@
       "@screens/*": ["src/screens/*"],
       "@providers/*": ["src/providers/*"],
       "@routes/*": ["src/routes/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@constants/*": ["src/constants/*"]
     }
   }
 }
