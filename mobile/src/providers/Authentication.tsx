@@ -1,16 +1,25 @@
-import React, { createContext, useState } from "react";
+import { useServices } from "@hooks/useServices";
+import React, { createContext, useMemo, useState } from "react";
+import { entities } from "@mydreams/core";
 
 type Props = { children: React.ReactNode };
 
 export const AuthenticationContext = createContext(
-  {} as { isUserAuthenticated: boolean; authenticateUser(): void }
+  {} as { isUserAuthenticated: boolean; authenticateUser(): Promise<void> }
 );
 
 export function AuthenticationProvider({ children }: Props) {
-  const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+  const { usecases } = useServices();
 
-  function authenticateUser() {
-    setIsUserAuthenticated(true);
+  const [user, setUser] = useState<entities.UserWithoutPassword>();
+  const isUserAuthenticated = useMemo(() => !!user, [user]);
+
+  async function authenticateUser() {
+    const _user = await usecases.signIn.execute({
+      email: "teste",
+      password: "testando",
+    });
+    setUser(_user);
   }
 
   return (

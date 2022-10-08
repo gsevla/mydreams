@@ -1,0 +1,17 @@
+{
+  "name": "mydreams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gsevla/mydreams.git",
+  "author": "Gabriel Alves <gabrieltots@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["core", "server", "mobile"],
+  "scripts": {
+    "start:server": "yarn workspace @mydreams/server start",
+    "start:mobile": "yarn workspace @mydreams/mobile start"
+  },
+  "devDependencies": {
+    "typescript": "~4.3.5"
+  }
+}
