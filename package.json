@@ -6,12 +6,20 @@
   "author": "Gabriel Alves <gabrieltots@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["core", "server", "mobile"],
+  "workspaces": [
+    "core",
+    "server",
+    "mobile"
+  ],
   "scripts": {
+    "prepare": "husky install",
     "start:server": "yarn workspace @mydreams/server start",
     "start:mobile": "yarn workspace @mydreams/mobile start"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "husky": "^8.0.1",
     "typescript": "~4.3.5"
   }
 }
