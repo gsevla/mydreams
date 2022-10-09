@@ -11,6 +11,7 @@
     "build:ios": "npx expo run:ios --configuration Release"
   },
   "dependencies": {
+    "@mydreams/core": "*",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
     "expo": "~46.0.13",
