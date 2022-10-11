@@ -6,6 +6,7 @@ module.exports = function (api) {
       [
         "module-resolver",
         {
+          cwd: "packagejson",
           root: ["./src"],
           alias: {
             "@components": "./src/components",
@@ -14,6 +15,7 @@ module.exports = function (api) {
             "@routes": "./src/routes",
             "@hooks": "./src/hooks",
             "@constants": "./src/constants",
+            "@test": "./test",
           },
         },
       ],
