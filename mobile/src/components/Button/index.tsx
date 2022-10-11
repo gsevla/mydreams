@@ -23,6 +23,7 @@ export function Button({
 
   return (
     <TouchableOpacity
+      accessibilityRole="button"
       activeOpacity={0.6}
       style={[theme.sizes.button, _styles.button, styles]}
       onPress={onPress}

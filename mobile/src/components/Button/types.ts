@@ -4,6 +4,6 @@ export type ButtonProps = {
   label: string;
   onPress(): void;
   disabled?: boolean;
-  styles: ViewStyle | TextStyle | ImageStyle;
+  styles?: ViewStyle | TextStyle | ImageStyle;
   labelColor?: string;
 };
