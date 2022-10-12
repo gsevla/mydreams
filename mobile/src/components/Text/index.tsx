@@ -23,6 +23,7 @@ export function Text({
 
   return (
     <RNText
+      accessibilityRole="text"
       style={{
         fontSize: _fontSize,
         color: color ?? theme.colors.text,

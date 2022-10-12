@@ -30,7 +30,7 @@ export class UserRepositoryImpl implements UserRepository {
     data: UserCredentials
   ): Promise<UserWithoutPassword | undefined> {
     const response = await this.datasource.post<UserWithoutPassword>(
-      this.uri,
+      `${this.uri}/authenticate`,
       data
     );
     return response.data;
