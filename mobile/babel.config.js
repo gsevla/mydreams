@@ -15,8 +15,16 @@ module.exports = function (api) {
             "@routes": "./src/routes",
             "@hooks": "./src/hooks",
             "@constants": "./src/constants",
+            "@services": "./src/services",
             "@test": "./test",
           },
+        },
+      ],
+      [
+        "module:react-native-dotenv",
+        {
+          moduleName: "@env",
+          path: "../.env",
         },
       ],
     ],

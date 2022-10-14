@@ -32,6 +32,7 @@
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.69.1",
     "babel-plugin-module-resolver": "^4.1.0",
+    "react-native-dotenv": "^3.3.1",
     "react-test-renderer": "18"
   }
 }

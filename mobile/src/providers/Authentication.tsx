@@ -1,4 +1,3 @@
-import { useServices } from "@hooks/useServices";
 import React, { createContext, useMemo, useState } from "react";
 import { entities } from "@mydreams/core";
 
@@ -9,17 +8,15 @@ export const AuthenticationContext = createContext(
 );
 
 export function AuthenticationProvider({ children }: Props) {
-  const { usecases } = useServices();
-
   const [user, setUser] = useState<entities.UserWithoutPassword>();
   const isUserAuthenticated = useMemo(() => !!user, [user]);
 
   async function authenticateUser() {
-    const _user = await usecases.signIn.execute({
-      email: "teste",
-      password: "testando",
-    });
-    setUser(_user);
+    // const _user = await usecases.user.signIn.execute({
+    //   email: "teste",
+    //   password: "testando",
+    // });
+    // setUser(_user);
   }
 
   return (
