@@ -9,11 +9,10 @@ import { HttpClientProtocol } from "../../protocols/HttpClient";
 export class UserRepositoryImpl implements UserRepository {
   private datasource: HttpClientProtocol;
 
-  private uri: string;
+  private uri = "/user";
 
-  constructor(datasource: HttpClientProtocol, uri: string) {
+  constructor(datasource: HttpClientProtocol) {
     this.datasource = datasource;
-    this.uri = uri;
   }
 
   async create(

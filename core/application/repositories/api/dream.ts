@@ -5,11 +5,10 @@ import { HttpClientProtocol } from "../../protocols/HttpClient";
 export class DreamRepositoryImpl implements DreamRepository {
   private datasource: HttpClientProtocol;
 
-  private uri: string;
+  private uri = "/dream";
 
-  constructor(datasource: HttpClientProtocol, uri: string) {
+  constructor(datasource: HttpClientProtocol) {
     this.datasource = datasource;
-    this.uri = uri;
   }
 
   async findById(id: number): Promise<Dream | undefined> {

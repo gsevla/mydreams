@@ -8,7 +8,7 @@ describe("Api UserRepository", () => {
     process.env.BASE_URL as string
   );
 
-  const repository = new UserRepositoryImpl(httpClient, "/user");
+  const repository = new UserRepositoryImpl(httpClient);
 
   it("should create an user", async () => {
     const input = {

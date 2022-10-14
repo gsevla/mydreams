@@ -9,7 +9,7 @@ test("User signIn UC", async () => {
     process.env.BASE_URL as string
   );
 
-  const repository = new UserRepositoryImpl(httpClient, "/user");
+  const repository = new UserRepositoryImpl(httpClient);
 
   const uc = new UserSignUpUCImpl(repository);
 
