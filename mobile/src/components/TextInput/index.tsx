@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { ForwardedRef, forwardRef, useState } from "react";
 import {
   StyleSheet,
   TextInput as RNTextInput,
+  TextInputProps,
   View,
   KeyboardTypeOptions,
   ReturnKeyTypeOptions,
@@ -13,25 +14,26 @@ import { Icon } from "@components/Icon";
 
 type Props = {
   label: string;
-  placeholder: string;
-  value: string;
-  onChangeText(value: string): void;
   error?: string;
   keyboardType?: KeyboardTypeOptions;
   returnKeyType?: ReturnKeyTypeOptions;
   isPassword?: boolean;
-};
+} & TextInputProps;
 
-export function TextInput({
-  value,
-  label,
-  placeholder,
-  error = "",
-  onChangeText,
-  keyboardType = "default",
-  returnKeyType = "default",
-  isPassword = false,
-}: Props) {
+function InnerTextInput(
+  {
+    value,
+    label,
+    placeholder,
+    error = "",
+    onChangeText,
+    keyboardType = "default",
+    returnKeyType = "default",
+    isPassword = false,
+    ...rest
+  }: Props,
+  ref: ForwardedRef<RNTextInput>
+) {
   const { theme } = useTheme();
 
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -42,7 +44,7 @@ export function TextInput({
 
   const passwordIcon = isPasswordVisible ? "eye-off-outline" : "eye-outline";
 
-  const secureTextEntry = isPassword && isPasswordVisible ? true : false;
+  const secureTextEntry = isPassword && !isPasswordVisible ? true : false;
 
   const styles = StyleSheet.create({
     container: {
@@ -65,6 +67,8 @@ export function TextInput({
       <SizedBox height={8} />
       <View style={{ justifyContent: "center" }}>
         <RNTextInput
+          {...rest}
+          ref={ref}
           style={[styles.input, theme.sizes.input]}
           value={value}
           onChangeText={onChangeText}
@@ -88,3 +92,5 @@ export function TextInput({
     </View>
   );
 }
+
+export const TextInput = forwardRef(InnerTextInput);
