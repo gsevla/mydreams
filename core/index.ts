@@ -11,15 +11,11 @@ function bootstrapUsecases(baseUrl: string) {
     user: new UserRepositoryImpl(httpClient),
   };
 
-  const usecases = {
+  return {
     user: {
       signUp: new Usecases.UserUsecases.UserSignUpUCImpl(repositories.user),
       signIn: new Usecases.UserUsecases.UserSignInUCImpl(repositories.user),
     },
-  };
-
-  return {
-    usecases,
   };
 }
 
