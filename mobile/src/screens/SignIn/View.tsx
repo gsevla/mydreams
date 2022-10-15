@@ -1,17 +1,12 @@
 import React from "react";
-import {
-  KeyboardAvoidingView,
-  View,
-  StyleProp,
-  StyleSheet,
-  ViewStyle,
-} from "react-native";
+import { KeyboardAvoidingView, View } from "react-native";
 import { Text } from "@components/Text";
 import { TextInput } from "@components/TextInput";
 import { SizedBox } from "@components/SizedBox";
 import { ButtonText } from "@components/Button/Text";
 import { ButtonSolid } from "@components/Button/Solid";
 import { Theme } from "@providers/Theme/types";
+import { styles } from "./styles";
 
 export type SignInScreenViewProps = {
   theme: Theme;
@@ -19,16 +14,9 @@ export type SignInScreenViewProps = {
   authenticate(): Promise<void>;
   setEmail(email: string): void;
   setPassword(password: string): void;
-  styles: StyleSheet.NamedStyles<{
-    container: StyleProp<ViewStyle>;
-    headerContainer: StyleProp<ViewStyle>;
-    form: StyleProp<ViewStyle>;
-    buttonsContainer: StyleProp<ViewStyle>;
-  }>;
 };
 
 export function SignInScreenView({
-  styles,
   theme,
   setEmail,
   setPassword,

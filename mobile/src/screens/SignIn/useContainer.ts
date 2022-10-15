@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { StyleSheet } from "react-native";
 import { useTheme } from "@hooks/useTheme";
 import { useAuthentication } from "@hooks/useAuthentication";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -22,27 +21,6 @@ export function useSignInScreenContainer({
   const email = useRef("");
   const password = useRef("");
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      paddingVertical: 24,
-    },
-    headerContainer: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    form: {
-      flexGrow: 0,
-    },
-    buttonsContainer: {
-      flex: 1,
-      justifyContent: "flex-end",
-      alignItems: "center",
-    },
-  });
-
   function setEmail(_email: string) {
     email.current = _email;
   }
@@ -64,7 +42,6 @@ export function useSignInScreenContainer({
 
   return {
     theme,
-    styles,
     setEmail,
     setPassword,
     authenticate,
