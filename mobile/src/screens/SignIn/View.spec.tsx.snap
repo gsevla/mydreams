@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInScreenView Component should match snapshot 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    [
+      {
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 24,
+      },
+      {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      style={
+        {
+          "color": "#2A5C99",
+          "fontSize": 24,
+          "textAlign": "auto",
+        }
+      }
+    >
+      MyDreams
+    </Text>
+    <View
+      accessible={false}
+      style={
+        {
+          "height": 8,
+          "width": undefined,
+        }
+      }
+    />
+    <Text
+      accessibilityRole="text"
+      style={
+        {
+          "color": "#14C0CC",
+          "fontSize": 24,
+          "textAlign": "auto",
+        }
+      }
+    >
+      O lugar ideal para guardar seus sonhos!
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "flexGrow": 0,
+      }
+    }
+  >
+    <View>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#242E38",
+            "fontSize": 16,
+            "textAlign": "auto",
+          }
+        }
+      >
+        Email
+      </Text>
+      <View
+        accessible={false}
+        style={
+          {
+            "height": 8,
+            "width": undefined,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="default"
+          onChangeText={[MockFunction]}
+          placeholder="gabriel@alves.com"
+          returnKeyType="default"
+          secureTextEntry={false}
+          style={
+            [
+              {
+                "borderColor": "#242E38",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "paddingRight": 32,
+              },
+              {
+                "height": 48,
+                "minWidth": "100%",
+                "padding": 8,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={false}
+        style={
+          {
+            "height": 8,
+            "width": undefined,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          style={
+            {
+              "color": "#FF3333",
+              "fontSize": 16,
+              "textAlign": "auto",
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      accessible={false}
+      style={
+        {
+          "height": 24,
+          "width": undefined,
+        }
+      }
+    />
+    <View>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#242E38",
+            "fontSize": 16,
+            "textAlign": "auto",
+          }
+        }
+      >
+        Senha
+      </Text>
+      <View
+        accessible={false}
+        style={
+          {
+            "height": 8,
+            "width": undefined,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="default"
+          onChangeText={[MockFunction]}
+          placeholder="********"
+          returnKeyType="default"
+          secureTextEntry={true}
+          style={
+            [
+              {
+                "borderColor": "#242E38",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "paddingRight": 32,
+              },
+              {
+                "height": 48,
+                "minWidth": "100%",
+                "padding": 8,
+              },
+            ]
+          }
+        />
+        <Text />
+      </View>
+      <View
+        accessible={false}
+        style={
+          {
+            "height": 8,
+            "width": undefined,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          style={
+            {
+              "color": "#FF3333",
+              "fontSize": 16,
+              "textAlign": "auto",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#2A5C99",
+          "borderRadius": 8,
+          "height": 48,
+          "justifyContent": "center",
+          "minWidth": 124,
+          "opacity": 1,
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+            "textAlign": "auto",
+          }
+        }
+      >
+        Entrar
+      </Text>
+    </View>
+    <View
+      accessible={false}
+      style={
+        {
+          "height": 8,
+          "width": undefined,
+        }
+      }
+    />
+    <View
+      accessibilityRole="button"
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderRadius": 8,
+          "height": 48,
+          "justifyContent": "center",
+          "minWidth": 124,
+          "opacity": 1,
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#2A5C99",
+            "fontSize": 18,
+            "textAlign": "auto",
+          }
+        }
+      >
+        Não possuo conta!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
