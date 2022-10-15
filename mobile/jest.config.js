@@ -13,7 +13,9 @@ module.exports = {
     "!**/coverage/**",
     "!**/node_modules/**",
     "!**/types.ts",
+    "!**/styles.ts",
     "!**/babel.config.js",
     "!**/jest.setup.js",
   ],
+  snapshotResolver: "<rootDir>/test/snapshotResolver.ts",
 };
